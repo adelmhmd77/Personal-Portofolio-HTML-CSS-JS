@@ -632,6 +632,7 @@ h3.my-profesion {
     display: block;
     margin-left: 0;
   }
+
 }
 @media (max-width:991px){
   .home .home-info{
@@ -647,6 +648,7 @@ h3.my-profesion {
     flex: 0 0 50%;
     max-width: 50%;
   }
+
 }
 @media (max-width:767px){
   .contact .contact-form .col-6,
@@ -660,5 +662,6 @@ h3.my-profesion {
     flex: 0 0 100%;
     max-width: 100%;
   }
+
 }
 /* ============= RESPONSIVE STYLE END ============= */

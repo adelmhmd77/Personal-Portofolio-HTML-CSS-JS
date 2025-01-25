@@ -12,12 +12,41 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/style-switcher.css">
-    <link rel="stylesheet" href="css/skins/skin-color-1.css" class="alternate-style" title="color-1" disabled/>
-    <link rel="stylesheet" href="css/skins/skin-color-2.css" class="alternate-style" title="color-2" disabled/>
-    <link rel="stylesheet" href="css/skins/skin-color-3.css" class="alternate-style" title="color-3" disabled/>
-    <link rel="stylesheet" href="css/skins/skin-color-4.css" class="alternate-style" title="color-4" />
-    <link rel="stylesheet" href="css/skins/skin-color-5.css" class="alternate-style" title="color-5" disabled/>
+    <link rel="stylesheet" href="css/style-switcher.css" />
+    <link
+      rel="stylesheet"
+      href="css/skins/skin-color-1.css"
+      class="alternate-style"
+      title="color-1"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="css/skins/skin-color-2.css"
+      class="alternate-style"
+      title="color-2"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="css/skins/skin-color-3.css"
+      class="alternate-style"
+      title="color-3"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="css/skins/skin-color-4.css"
+      class="alternate-style"
+      title="color-4"
+    />
+    <link
+      rel="stylesheet"
+      href="css/skins/skin-color-5.css"
+      class="alternate-style"
+      title="color-5"
+      disabled
+    />
 
     <title>Personal portofolio</title>
   </head>
@@ -29,24 +58,24 @@
         <div class="logo">
           <a href="#"><span>D</span>eveloper</a>
         </div>
-        <div class="nav-toggler">
+        <div class="nav-toggler" onclick="apearnav()">
           <span></span>
         </div>
         <ul class="nav">
           <li>
-            <a href="#home" class="active"><i class="fa fa-home"></i> Home</a>
+            <a href="#home" class="active" onclick="showSection('home', this)"><i class="fa fa-home"></i> Home</a>
           </li>
           <li>
-            <a href="#about"><i class="fa fa-user"></i> About</a>
+            <a href="#about" onclick="showSection('about', this)"><i class="fa fa-user"></i> About</a>
           </li>
           <li>
-            <a href="#service"><i class="fa fa-list"></i> Services</a>
+            <a href="#service" onclick="showSection('service', this)"><i class="fa fa-list"></i> Services</a>
           </li>
           <li>
-            <a href="#portofolio"><i class="fa fa-briefcase"></i> Portofolio</a>
+            <a href="#portofolio" onclick="showSection('portofolio', this)"><i class="fa fa-briefcase"></i> Portfolio</a>
           </li>
           <li>
-            <a href="#contact"><i class="fa fa-comments"></i> Contact</a>
+            <a href="#contact" onclick="showSection('contact', this)"><i class="fa fa-comments"></i> Contact</a>
           </li>
         </ul>
       </div>
@@ -54,7 +83,7 @@
       <!-- ========== MAIN CONTENT START  ========== -->
       <div class="main_content">
         <!-- ========== HOME SECTION START  ========== -->
-        <section class="home section " id="home">
+        <section class="home section" id="home">
           <div class="container">
             <div class="row">
               <div class="home-info padd-15">
@@ -83,7 +112,7 @@
         </section>
         <!-- ========== HOME SECTION END  ========== -->
         <!-- ========== ABOUT SECTION START  ========== -->
-        <section class="about section " id="about">
+        <section class="about section" id="about">
           <div class="container">
             <div class="row">
               <div class="section-title padd-15">
@@ -295,7 +324,7 @@
         </section>
         <!-- ========== ABOUT SECTION END  ========== -->
         <!-- ========== SERVICES SECTION START  ========== -->
-        <section class="service section " id="service">
+        <section class="service section" id="service">
           <div class="container">
             <div class="row">
               <div class="section-title padd-15">
@@ -392,7 +421,7 @@
         </section>
         <!-- ========== SERVICES SECTION END  ========== -->
         <!-- ========== PORTOFOLIO SECTION START  ========== -->
-        <section class="portofolio section " id="portofolio">
+        <section class="portofolio section" id="portofolio">
           <div class="container">
             <div class="row">
               <div class="section-title padd-15">
@@ -529,32 +558,50 @@
                 <div class="row">
                   <div class="form-item col-6 padd-15">
                     <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Name">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Name"
+                      />
                     </div>
                   </div>
                   <div class="form-item col-6 padd-15">
                     <div class="form-group">
-                      <input type="email" class="form-control" placeholder="Email">
-                    </div>
-                  </div>
-                </div> <!-- Missing closing row div added here -->
-            
-                <div class="row">
-                  <div class="form-item col-12 padd-15">
-                    <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Subject">
+                      <input
+                        type="email"
+                        class="form-control"
+                        placeholder="Email"
+                      />
                     </div>
                   </div>
                 </div>
-            
+                <!-- Missing closing row div added here -->
+
                 <div class="row">
                   <div class="form-item col-12 padd-15">
                     <div class="form-group">
-                      <textarea name="" class="form-control" id="" placeholder="Message"></textarea>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Subject"
+                      />
                     </div>
                   </div>
                 </div>
-            
+
+                <div class="row">
+                  <div class="form-item col-12 padd-15">
+                    <div class="form-group">
+                      <textarea
+                        name=""
+                        class="form-control"
+                        id=""
+                        placeholder="Message"
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+
                 <div class="row">
                   <div class="form-item col-12 padd-15">
                     <button type="submit" class="btn">Send Message</button>
@@ -571,7 +618,7 @@
     </div>
     <!-- ========== MAIN CONTAINER END  ========== -->
     <!-- ========== STYLE SWITCHER START  ========== -->
-     <div class="style-switcher">
+    <div class="style-switcher">
       <div class="day-night s-icon">
         <i class="fas"></i>
       </div>
@@ -586,10 +633,16 @@
         <span class="color-4" onclick="setActiveStyle('color-4')"></span>
         <span class="color-5" onclick="setActiveStyle('color-5')"></span>
       </div> -->
-     </div>
+    </div>
     <!-- ========== STYLE SWITCHER END  ========== -->
 
     <!-- ========== JS SCRIPT FILES  ========== -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"
+      integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="js/script.js"></script>
     <script src="js/style-switcher.js"></script>
   </body>
